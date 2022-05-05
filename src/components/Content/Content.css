@@ -1,0 +1,149 @@
+.content-holder {
+    min-height: 100vh;
+    margin-right: 30%;
+    padding: 20px 30px;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.element-holder {
+    width: 85%;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: lightgoldenrodyellow;
+}
+.left-panel {
+    min-width: 50px;
+    width: 10%;
+    margin-right: 10px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#arrowUp,
+#arrowDown {
+    background: transparent;
+    border: none;
+    height: 30px;
+}
+#arrowUp img, #arrowDown img {
+    height: 100%;
+    width: auto;
+}
+#upvotes {
+    margin: 5px;
+}
+#comments-btn {
+    width: 50px;
+    margin-top: auto;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#comments-btn img {
+    width: 20px;
+    height: auto;
+}
+#comments-btn span {
+    padding-top: 5px;
+}
+.left-panel button:hover {
+    cursor: pointer;
+}
+#arrowUp:active, 
+#arrowDown:active, 
+#comments-btn:active {
+    box-shadow: 0 0 3px 2px azure;
+    background: azure;
+}
+.content-panel {
+    width: 90%;
+    word-break: break-word;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+}
+.element-holder .content-panel {
+    overflow-x: auto;
+}
+.content {
+    width: 90%;
+    height: auto;
+    align-self: center;
+    margin: 5px;
+}
+.content img {
+    width: 100%;
+    height: auto;
+}
+.content-panel video {
+    max-width: 90%;
+}
+.title:hover {
+    cursor: pointer;
+}
+.content:hover {
+    cursor: pointer;
+}
+
+#home-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    width: 150px;
+    height: 50px;
+    background-color: darkorange;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 150px;
+}
+#home-btn:hover {
+    cursor: pointer;
+    color: white;
+}
+
+@media screen and (max-width: 980px) {
+    #arrowUp,
+    #arrowDown {
+        height: 30px;
+    }
+    .left-panel span {
+        font-size: .75rem;
+    }
+    .content-holder h2 {
+        font-size: 1rem;
+    }
+    .markdown {
+        font-size: .75rem;
+    }
+    .content-holder p {
+        font-size: .75rem;
+    }
+    #home-btn {
+        height: 40px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .content-holder {
+        width: 100%;
+    }
+    .element-holder {
+        width: 92%;
+    }
+    #home-btn {
+        right: 50%;
+        transform: translate(50%, 0);
+    }
+}
